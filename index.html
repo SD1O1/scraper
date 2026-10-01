@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signal Harvest — research workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#"><span class="brand-mark">S</span><span>signal<br>harvest</span></a>
+        <nav>
+          <a class="nav-link active" href="#dashboard"><span>⌂</span> Overview</a>
+          <a class="nav-link" href="#targets"><span>◎</span> Targets <b id="target-count">3</b></a>
+          <a class="nav-link" href="#library"><span>▤</span> Library</a>
+          <a class="nav-link" href="#exports"><span>⇩</span> Exports</a>
+        </nav>
+        <div class="sidebar-foot"><div class="usage-label">MONTHLY CAPTURE</div><div class="usage"><span></span></div><p><b>2,834</b> / 10,000 items</p><button class="upgrade">Upgrade plan ↗</button></div>
+        <div class="profile"><div class="avatar">AR</div><div><b>Alex Rivera</b><small>Personal workspace</small></div><span>⌄</span></div>
+      </aside>
+      <main>
+        <header><div><p class="eyebrow">THURSDAY, OCTOBER 1</p><h1>Good morning, Alex.</h1></div><div class="header-actions"><button class="icon-button" aria-label="Notifications">♧</button><button class="primary" id="new-target">+ New target</button></div></header>
+        <section class="intro"><div><p class="section-kicker">YOUR RESEARCH DESK</p><h2>Find the signal in the <em>noise.</em></h2><p class="lede">Watch conversations, opportunities, and market sentiment across the platforms where your customers already are.</p></div><div class="pulse"><span class="pulse-dot"></span><div><small>COLLECTION STATUS</small><strong>All sources healthy</strong></div><span class="chevron">›</span></div></section>
+        <section class="metrics" aria-label="Summary metrics"><article><span class="metric-icon orange">⌁</span><p>ITEMS CAPTURED</p><strong>2,834</strong><small class="up">↑ 18.4% <i>vs. last 7 days</i></small></article><article><span class="metric-icon blue">◌</span><p>ACTIVE TARGETS</p><strong id="metric-targets">3</strong><small>across 3 sources</small></article><article><span class="metric-icon green">↗</span><p>HIGH-INTENT SIGNALS</p><strong>187</strong><small class="up">↑ 24 new <i>this week</i></small></article><article><span class="metric-icon pink">◷</span><p>LAST COLLECTION</p><strong class="time">8m ago</strong><small>Next run in 22 min</small></article></section>
+        <section class="targets-section" id="targets"><div class="section-head"><div><p class="section-kicker">ACTIVE MONITORS</p><h2>Your targets</h2></div><button class="text-button" id="manage-targets">Manage targets <span>→</span></button></div><div id="targets-grid" class="target-grid"></div></section>
+        <section class="bottom-grid"><article class="activity"><div class="section-head"><div><p class="section-kicker">LIVE FEED</p><h2>Fresh from your sources</h2></div><button class="text-button">View library <span>→</span></button></div><div class="feed-item"><span class="source reddit">r/</span><div><p><b>Hiring insight:</b> “What tools are actually saving freelancers time?”</p><small>r/freelance · 12 minutes ago</small></div><span class="tag">Question</span></div><div class="feed-item"><span class="source x">𝕏</span><div><p>Looking for a <b>product designer</b> with B2B SaaS experience.</p><small>@morning_studio · 24 minutes ago</small></div><span class="tag warm">Opportunity</span></div><div class="feed-item"><span class="source up">up</span><div><p><b>New job:</b> Research assistant for competitive landscape report</p><small>Upwork · 41 minutes ago</small></div><span class="tag">Job</span></div></article><article class="insights"><p class="section-kicker">WEEKLY PULSE</p><h2>What’s rising</h2><div class="trend"><div><span>01</span><b>AI workflow automation</b></div><strong>+42%</strong></div><div class="trend"><div><span>02</span><b>Fractional product teams</b></div><strong>+31%</strong></div><div class="trend"><div><span>03</span><b>User research recruiting</b></div><strong>+18%</strong></div><button class="outline">Explore insights →</button></article></section>
+      </main>
+    </div>
+    <dialog id="target-dialog"><form method="dialog"><button class="close" value="cancel" aria-label="Close">×</button><p class="section-kicker">CREATE A MONITOR</p><h2>What should we watch?</h2><p class="dialog-lede">Set a phrase, source, and collection cadence. You can revise this anytime.</p><label>Target name<input id="target-name" required placeholder="e.g. Design leadership roles" /></label><label>Search query<input id="target-query" required placeholder="e.g. hiring product designer" /></label><label>Source<select id="target-source"><option value="X">X (Twitter)</option><option value="Reddit">Reddit</option><option value="Upwork">Upwork</option></select></label><div class="dialog-actions"><button value="cancel" class="cancel">Cancel</button><button id="save-target" class="primary" value="default">Create target</button></div></form></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
