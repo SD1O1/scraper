@@ -1,0 +1,9 @@
+{
+  "name": "signal-harvest",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "python -m uvicorn backend:app --host 127.0.0.1 --port 4173",
+    "test": "python -m unittest discover -s tests"
+  }
+}

@@ -1,0 +1,4 @@
+.env
+signal_harvest.db
+__pycache__/
+*.pyc
